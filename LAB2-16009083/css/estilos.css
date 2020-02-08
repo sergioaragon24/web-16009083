@@ -1,0 +1,51 @@
+#area-dibujo {
+  width: 700px;
+  height: 400px;
+  background-color: darkgrey;
+  position: relative;
+  top: 100px;
+  left: 100px; 
+}
+.Instrucciones1{
+    width: 50%;
+    float: right;
+    position: relative;
+    top: -140px;
+    left: 0px;
+}
+.Instrucciones2 .boton1{
+    width: 50%;
+    float: left;
+    position: relative;
+    top: 100px;
+    left: 280px
+}
+.Instrucciones2 .boton2{
+    width: 50%;
+    float: left;
+    position: relative;
+    top: 150px;
+    left:-655px
+}
+.Instrucciones2 .eliminar1{
+    width: 50%;
+    float: left;
+    position: relative;
+    top: -30px;
+    left: 950px
+}
+#text1{
+    width: 400px;
+    position: relative;
+    top: 270px;
+    left: 200px
+}
+#destino {
+    width: 200px;
+    position: relative;
+    top: 190px;
+    left: 700px
+}
+
+
+/*# sourceMappingURL=estilos.css.map */
