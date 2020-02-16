@@ -1,0 +1,13 @@
+<h1>notas</h1>
+
+Curso : <input type="string" [(ngModel)]="carrera"><br/><br/>
+
+notas : <input type="number" [(ngModel)]="num1"><br/><br/>
+
+<button type="button" (click)="muestraResultado()" > subir </button>
+
+<div *ngIf="showMessage">
+    <table *ngFor="let value of notas">
+        <tr><td width="200">{{value.materia}}</td><td width="200">{{value.nota}}</td></tr>
+    </table>
+</div>
