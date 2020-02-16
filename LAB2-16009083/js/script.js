@@ -10,6 +10,7 @@ var selectput;
 var aaragrager;
 var arrdestino;
 
+
 function init() {
     /* canvas*/
     canvas = document.getElementById('area-dibujo');
@@ -25,21 +26,49 @@ function init() {
 
     /* Eliminar elemento */
     botonbor2 = document.getElementById('btnMover2');
-    selectput = document.getElementById('destino');
+    selectput = document.getElementById('text1');
     botonbor2.onclick = deleteElement;
+    botonbor = document.getElementById('btnConsulta')
+    botonbor.onclick = deleteElement1;
+
+    dibujarArreglo(aaragrager, selectagreger);
+    dibujarArreglo(arrdestino,selectputo);
 
 }
 function addElement(){
-    let valorAgregar = selectput.value;
+   // let valorAgregar = selectput.value;
+   let valorAgregar = selectagreger.value;
     if (valorAgregar != "") {
-        let opt = document.createElement('destino');
+        let opt = document.createElement('option');
         opt.appendChild( document.createTextNode(valorAgregar) );
         opt.value = valorAgregar;
-        selectagreger.appendChild(opt);
+        selectput.appendChild(opt);
     }
 }
 function deleteElement(){
     selectagreger.options[selectagreger.selectedIndex] = null;
+}
+function deleteElement1(){
+    selectput.options[selectputo.selectedIndex] = null;
+}
+function dibujarArreglo(arreglo, select) {
+    borrarSelect(select);
+    arreglo.forEach(x => {
+        let option = document.createElement("option");
+        option.text = x;
+        select.add(option);
+    });
+}
+function borrarSelect(elemento) {
+    while (elemento.options.length > 0) {                
+        elemento.remove(0);
+    }   
+}
+function moverDatos() {
+    arrdestino.push(aaragrager[selectagreger.selectedIndex]);
+    aaragrager.splice(selectagreger.selectedIndex, 1);
+    dibujarArreglo(aaragrager, selectagreger);
+    dibujarArreglo(arrdestino,selectputo);
 }
 
 function dibujarCirculo() {
