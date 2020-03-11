@@ -1,0 +1,6 @@
+<h1>Saludos</h1>
+<input #nombre type="text"/>
+<button type="button" (click)="agregarNombre(nombre.value)">Agregar</button>
+<ul *ngFor="let nombre of nombres">
+  <li>{{nombre}}</li>
+</ul>
